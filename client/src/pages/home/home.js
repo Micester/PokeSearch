@@ -4,6 +4,8 @@ import React from "react";
 import axios from "axios";
 import './home.scss';
 
+import HomeSets from "../../comps/homeSets/HomeSets";
+
 class HomePage extends React.Component {
   state = {
     sets: []
@@ -54,6 +56,7 @@ class HomePage extends React.Component {
         {/* Header */}
 
         {/* Body - Pokemon Sets */}
+        <HomeSets sets={this.state.sets}/>
 
         {/* Footer */}
         </>
