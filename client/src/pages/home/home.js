@@ -4,7 +4,9 @@ import React from "react";
 import axios from "axios";
 import './home.scss';
 
-import OldSets from "../../comps/homeSets/OldSets";
+// Components
+import OldSets from "../../comps/OldSets/OldSets";
+import NewSets from "../../comps/NewSets/NewSets";
 
 class HomePage extends React.Component {
   state = {
@@ -58,6 +60,9 @@ class HomePage extends React.Component {
           {/* Body - Pokemon Sets */}
           <section className="Home-Old">
             <OldSets sets={this.state.sets} />
+          </section>
+          <section className="Home-New">
+            <NewSets sets={this.state.sets} />
           </section>
 
           {/* Footer */}
