@@ -4,7 +4,7 @@ import React from "react";
 import axios from "axios";
 import './home.scss';
 
-import HomeSets from "../../comps/homeSets/HomeSets";
+import FavSets from "../../comps/homeSets/FavSets";
 
 class HomePage extends React.Component {
   state = {
@@ -14,7 +14,7 @@ class HomePage extends React.Component {
   componentDidMount() {
     axios.get(`/sets`).then((response) => {
       console.log(response)
-      this.setState({sets: response.data});
+      this.setState({ sets: response.data });
     })
   }
 
@@ -51,16 +51,18 @@ class HomePage extends React.Component {
 
   render() {
     return (
-      <div className="Home">
+      <section className="Home">
         <>
-        {/* Header */}
+          {/* Header */}
 
-        {/* Body - Pokemon Sets */}
-        <HomeSets sets={this.state.sets}/>
+          {/* Body - Pokemon Sets */}
+          <section className="Home-Fav">
+            <FavSets sets={this.state.sets} />
+          </section>
 
-        {/* Footer */}
+          {/* Footer */}
         </>
-      </div>
+      </section>
     );
   }
 }
