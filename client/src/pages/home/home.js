@@ -4,7 +4,7 @@ import React from "react";
 import axios from "axios";
 import './home.scss';
 
-import FavSets from "../../comps/homeSets/FavSets";
+import OldSets from "../../comps/homeSets/OldSets";
 
 class HomePage extends React.Component {
   state = {
@@ -56,8 +56,8 @@ class HomePage extends React.Component {
           {/* Header */}
 
           {/* Body - Pokemon Sets */}
-          <section className="Home-Fav">
-            <FavSets sets={this.state.sets} />
+          <section className="Home-Old">
+            <OldSets sets={this.state.sets} />
           </section>
 
           {/* Footer */}

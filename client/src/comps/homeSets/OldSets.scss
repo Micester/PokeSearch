@@ -1,0 +1,54 @@
+.Home-Old-Sets{
+    
+    // Top Bar
+    &-Top{
+        background-color: lightblue;
+    }
+    &-Top-Heading{
+        background-color: lightblue;
+        margin: 0 auto;
+    }
+
+    &-Top-Heading-Left{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    // Old Sets
+    // Old Sets Container
+    &-Bottom-PokeSet-Con{
+        margin-top: 22px;
+        padding: 20px 0 10px 5px;
+        width: 400px;
+        overflow: auto;
+    }
+
+    // Links
+    &-Bottom-PokeSet-Con-Link{
+        position: relative;
+        width: 175px;
+        height: 75px;
+        background: rgb(129, 20, 20); 
+        border-radius: 4px;
+        margin: 10px;
+        display: inline-block;
+      
+        text-decoration: none;
+        text-align: center;
+    }
+
+    // Link-Images
+    &-Bottom-PokeSet-Con-Link-Image{
+        height: 50px;
+        max-width: 150px;
+        margin-top: 10px;
+    }
+
+    // Link-Text
+    &-Bottom-PokeSet-Con-Link-Image__Text{
+        font-weight: normal;
+        font-size: 10px;
+        display: block;
+    }
+}
