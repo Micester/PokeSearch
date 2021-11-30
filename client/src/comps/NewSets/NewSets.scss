@@ -2,13 +2,12 @@
     
     // Top Bar
     &-Top{
-        background-color: lightblue;
+        width: 300px;
     }
     &-Top-Heading{
         background-color: lightblue;
-        margin: 0 auto;
-        width: auto;
-        min-width: 400px;
+        width: 100px;
+        min-width: 300px;
     }
 
     &-Top-Heading-Left{

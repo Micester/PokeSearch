@@ -1,0 +1,25 @@
+.Home {
+
+    width: 100%;
+    margin: 0 auto;
+
+    &-HomeBody{
+        width: 100%;
+        overflow: visible;
+        background: white;
+        min-height: 800px;
+    }
+
+    &-Left{
+        width: 635px;
+        float: left;
+        padding: 10px 0 0 0;
+    }
+
+    &-Right{
+        width: 310PX;
+        float: right;
+        padding: 10px 0 0 0;
+        min-height: 50px;
+    }
+}

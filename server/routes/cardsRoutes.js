@@ -14,33 +14,32 @@ function cardsData() {
   return JSON.parse(data);
 }
 
-// get Card by id, returns set  if found
+// get Card by id, returns name  if found
 function getcardsDataById(id) {
   const cardsArray = cardsData();
-  let filteredCards = cardsArray.filter((set) => set.id === id);
+  let filteredCards = cardsArray.filter((name) => name.id === id);
   if (filteredCards.length) {
     return filteredCards.shift();
   } else {
-    return `no quote found with the set: ${id}`;
+    return `no quote found with the id: ${id}`;
   }
 }
 
 // add a new Pokemon-Card and save to cards.json file
 function addCards(body) {
   const cardsArray = cardsData();
-  const card = new Card(body.set, body.name);
-  cardsArray.push(card);
+  const card = new Name(body.name);
+  cardsArray.push(name);
 
   fs.writeFileSync(cardsFile, JSON.stringify(cardsArray));
 
-  return card;
+  return name;
 }
 
-// Card Object constructor, used to help create new Cards in testing
-function Card(set, name) {
+// Name Object constructor, used to help create new Cards in testing
+function Name(name) {
   this.id = uuidv4();
-  this.set = set;
-  this.name = this.name;
+  this.name = name;
 }
 
 // Quote routes
@@ -49,7 +48,7 @@ router.get('/', (req, res) => {
 });
 
 router.get('/:id', (req, res) => {
-  res.json(getcardsDataById(req.params.set));
+  res.json(getcardsDataById(req.params.id));
 });
 
 router.post('/', (req, res) => {

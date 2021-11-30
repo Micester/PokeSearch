@@ -3,15 +3,22 @@ import Home from "./pages/home/home";
 import Sets from "./pages/sets/sets";
 import "./app.scss";
 
+import Header from "./comps/Header/Header";
+import Footer from "./comps/Footer/Footer";
+
 function App() {
   return (
     <BrowserRouter>
-      {/* Header Component Goes Here */}
+      <section className="Header">
+        <Header />
+      </section>
       <Switch>
         <Route path='/' exact component={Home} />
         <Route path='/sets' exact component={Sets} />
       </Switch>
-      {/* Footer Component Goes Here */}
+      <section className="Footer">
+        <Footer />
+      </section>
     </BrowserRouter>
   );
 }

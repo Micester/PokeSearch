@@ -5,13 +5,27 @@ import axios from "axios";
 import './home.scss';
 
 // Components
+
+
+import SearchPage from "../SearchCards/SearchCards";
+
+import About from "../../comps/About/About";
+
 import OldSets from "../../comps/OldSets/OldSets";
 import NewSets from "../../comps/NewSets/NewSets";
 
+import OldBanner from "../../comps/OldBanner/OldBanner";
+
+import NewBanner from "../../comps/NewBanner/NewBanner";
+
+import HomeCards from "../HomeCards/HomeCards";
+
+
+
 class HomePage extends React.Component {
   state = {
-    sets: []
-  }
+    sets: [],
+  };
 
   componentDidMount() {
     axios.get(`/sets`).then((response) => {
@@ -54,20 +68,47 @@ class HomePage extends React.Component {
   render() {
     return (
       <section className="Home">
-        <>
-          {/* Header */}
 
-          {/* Body - Pokemon Sets */}
-          <section className="Home-Old">
-            <OldSets sets={this.state.sets} />
-          </section>
-          <section className="Home-New">
-            <NewSets sets={this.state.sets} />
+        {/* Body - Pokemon Sets */}
+        <section className="HomeBody">
+          {/* Search Bar | Right Side */}
+          <section className="Home-Right">
+            <SearchPage />
           </section>
 
-          {/* Footer */}
-        </>
-      </section>
+
+          <section className="Home-Left">
+            {/* About  | Left Side*/}
+            <section className="Home-About">
+              <About />
+            </section>
+
+            {/* Sets  | Left Side*/}
+            <section className="Home-Old">
+              <OldSets sets={this.state.sets} />
+            </section>
+            <section className="Home-New">
+              <NewSets sets={this.state.sets} />
+            </section>
+
+            <section className="Home-OldBanner">
+              <OldBanner />
+              <HomeCards/>
+            </section>
+
+            <section className="Home-NewBanner">
+              <NewBanner />
+
+            </section>
+
+            {/* Cards Display | Left Side */}
+            <section className="Home-Cards">
+              {/* <HomeCards/> */}
+            </section>
+          </section>
+        </section>
+
+      </section >
     );
   }
 }
