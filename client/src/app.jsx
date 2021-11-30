@@ -17,7 +17,7 @@ function App() {
         <Route path='/sets' exact component={Sets} />
       </Switch>
       <section className="Footer">
-        <Footer />
+        {/* <Footer /> */}
       </section>
     </BrowserRouter>
   );

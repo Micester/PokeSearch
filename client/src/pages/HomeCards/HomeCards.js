@@ -1,12 +1,16 @@
 import { Route, Switch } from "react-router-dom";
 import { Component } from "react";
+import pokemon from 'pokemontcgsdk'
 import React from "react";
 import axios from "axios";
 import './HomeCards.scss';
 
+pokemon.configure({ apiKey: '7f99b83a-cdb8-4c0d-8523-1bd9286a9b14' })
+
 // Components
-import OldCards from "../../comps/OldCards/OldCards";
-import NewCards from "../../comps/NewCards/NewCards";
+import OldCardsDisplay from "../../comps/OldCardsDisplay/OldCardsDisplay";
+
+
 
 class HomeCards extends React.Component {
   state = {
@@ -14,15 +18,32 @@ class HomeCards extends React.Component {
   };
 
   componentDidMount() {
-    axios.get(`/cards`).then((response) => {
-      console.log(response)
-      this.setState({ cards: response.data });
+    pokemon.card.all({ q: 'set.name:Fossil' })
+    .then((cards) => {
+        // console.log('Base-3 props', cards) // "Base"
+        this.setState({ cards: cards });
     })
   }
 
-  getSets() {
+  // getCards() {
+  //   axios
+  //   pokemon.card.all({ q: 'subtypes:mega', orderBy: '-set.releaseDate' })
+  //     .then(result => {
+  //       console.log(result.data[0].name)
+  //     })
+  //     .catch((error) => console.log(error));
+  // }
+
+  // componentDidMount() {
+  //   axios.get(`/cards`).then((response) => {
+  //     console.log(response)
+  //     this.setState({ cards: response.data });
+  //   })
+  // }
+
+  getCards() {
     axios
-      .get('/cards')
+      .get({ q: 'subtypes:mega', orderBy: '-set.releaseDate' })
       .then((response) => {
         this.setState({
           cards: response.data,
@@ -31,7 +52,7 @@ class HomeCards extends React.Component {
       .catch((error) => console.log(error));
   }
 
-  getSetsById(id) {
+  getCardsById(id) {
     axios
       .get('/cards/:id')
       .then((response) => {
@@ -57,7 +78,7 @@ class HomeCards extends React.Component {
         {/* Cards Display | Left Side */}
         <section className="Home-Left">
           <section className="Home-Left-Cards">
-            <OldCards cards={this.state.cards} />
+            <OldCardsDisplay cards={this.state.cards}/>
           </section>
         </section>
       </section >

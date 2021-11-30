@@ -1,8 +1,11 @@
 import { Route, Switch } from "react-router-dom";
 import { Component } from "react";
+import pokemon from 'pokemontcgsdk'
 import React from "react";
 import axios from "axios";
 import './SearchCards.scss';
+
+pokemon.configure({ apiKey: '7f99b83a-cdb8-4c0d-8523-1bd9286a9b14' })
 
 // Components
 import SearchBar from "../../comps/Search/Search";
@@ -12,20 +15,19 @@ class SearchPage extends React.Component {
     cards: [],
   };
 
-  componentDidMount() {
-    axios.get(`/cards`).then((response) => {
-      console.log(response)
-      this.setState({ cards: response.data });
-    })
-  }
+  // componentDidMount() {
+  //   pokemon.card.all()
+  //     .then((cards) => {
+  //       console.log(cards) // "Blastoise"
+  //       this.setState({ cards: cards.data });
+  //     })
+  // }
 
-  getSets() {
+  getCards() {
     axios
-      .get('/cards')
-      .then((response) => {
-        this.setState({
-          cards: response.data,
-        });
+    pokemon.card.all({ q: 'subtypes:mega', orderBy: '-set.releaseDate' })
+      .then(result => {
+        console.log(result.data[0].name)
       })
       .catch((error) => console.log(error));
   }

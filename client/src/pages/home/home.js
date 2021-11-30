@@ -92,18 +92,18 @@ class HomePage extends React.Component {
             </section>
 
             <section className="Home-OldBanner">
-              <OldBanner />
-              <HomeCards/>
+              <OldBanner sets={this.state.sets}/>
+
             </section>
 
             <section className="Home-NewBanner">
-              <NewBanner />
+              <NewBanner  sets={this.state.sets}/>
 
             </section>
 
             {/* Cards Display | Left Side */}
             <section className="Home-Cards">
-              {/* <HomeCards/> */}
+              <HomeCards/>
             </section>
           </section>
         </section>
