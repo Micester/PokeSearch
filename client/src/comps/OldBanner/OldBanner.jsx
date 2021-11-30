@@ -6,8 +6,8 @@ function OldBanner(props) {
         <section className="Home-Old-Sets">
             <section className="Home-Old-Sets-Top">
                 <div className="Home-Old-Sets-Top-Heading">
-                    <div className="Home-Old-Sets-Top-Heading-Left">
-                        <h1 className="Home-Old-Sets-Top-Heading-Left-Title">
+                    <div className="Home-Old-Sets-Fossile">
+                        <h1 className="Home-Old-Sets-Fossile-Title">
                             Fossil 
 
                         </h1>

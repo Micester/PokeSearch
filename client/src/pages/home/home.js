@@ -18,7 +18,8 @@ import OldBanner from "../../comps/OldBanner/OldBanner";
 
 import NewBanner from "../../comps/NewBanner/NewBanner";
 
-import HomeCards from "../HomeCards/HomeCards";
+import FossilSet from "../../comps/FossilSet/FossilSet";
+import CelebrationSet from "../../comps/CelebrationSet/CelebrationSet";
 
 
 
@@ -65,6 +66,7 @@ class HomePage extends React.Component {
     }
   }
 
+
   render() {
     return (
       <section className="Home">
@@ -93,18 +95,15 @@ class HomePage extends React.Component {
 
             <section className="Home-OldBanner">
               <OldBanner sets={this.state.sets}/>
-
+              <FossilSet/>
             </section>
 
             <section className="Home-NewBanner">
-              <NewBanner  sets={this.state.sets}/>
-
+              <NewBanner sets={this.state.sets}/>
+              <CelebrationSet/>
             </section>
 
-            {/* Cards Display | Left Side */}
-            <section className="Home-Cards">
-              <HomeCards/>
-            </section>
+    
           </section>
         </section>
 
