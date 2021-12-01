@@ -5,7 +5,7 @@ import React from "react";
 import axios from "axios";
 import './sets.scss';
 
-import OldSets from '../../comps/OldSets/OldSets';
+import AllSets from '../../comps/AllSets/AllSets';
 
 
 pokemon.configure({ apiKey: '7f99b83a-cdb8-4c0d-8523-1bd9286a9b14' })
@@ -31,7 +31,7 @@ class SetsPage extends React.Component {
         <>
 
         {/* Body - Pokemon Sets */}
-        <OldSets sets={this.state.sets} />
+        <AllSets sets={this.state.sets} />
         </>
       </div>
     );

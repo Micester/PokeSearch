@@ -11,8 +11,9 @@ import SearchPage from "../SearchCards/SearchCards";
 
 import About from "../../comps/About/About";
 
-import OldSets from "../../comps/OldSets/OldSets";
-import NewSets from "../../comps/NewSets/NewSets";
+
+import OldSetsApi from "../../comps/OldSetsApi/OldSetsApi";
+import NewSetsApi from "../../comps/NewSetsApi/NewSetsApi";
 
 import OldBanner from "../../comps/OldBanner/OldBanner";
 
@@ -87,10 +88,10 @@ class HomePage extends React.Component {
 
             {/* Sets  | Left Side*/}
             <section className="Home-Old">
-              <OldSets sets={this.state.sets} />
+              <OldSetsApi/>
             </section>
             <section className="Home-New">
-              <NewSets sets={this.state.sets} />
+              <NewSetsApi/>
             </section>
 
             <section className="Home-OldBanner">
