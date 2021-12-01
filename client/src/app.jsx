@@ -1,6 +1,8 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from "./pages/home/home";
 import Sets from "./pages/sets/sets";
+import Card from "./pages/card/card";
+
 import "./app.scss";
 
 import Header from "./comps/Header/Header";
@@ -15,7 +17,10 @@ function App() {
       <Switch>
         <Route path='/' exact component={Home} />
         <Route path='/set' exact component={Sets} />
-        {/* <Route path='/set/set:name' exact component={SetsCards} /> */}
+        {/* <Route path='/set/:id' component={Sets} /> */}
+        {/* <Route path='/card' exact component={Card} /> */}
+        {/* <Route path='/searchCards/' exact component={SearchCards} /> */}
+         
       </Switch>
       <section className="Footer">
         <Footer />

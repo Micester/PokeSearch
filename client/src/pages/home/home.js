@@ -7,7 +7,7 @@ import './home.scss';
 // Components
 
 
-import SearchPage from "../SearchCards/SearchCards";
+import SearchPage from "../searchCards/SearchCards";
 
 import About from "../../comps/About/About";
 
@@ -101,7 +101,7 @@ class HomePage extends React.Component {
 
             <section className="Home-NewBanner">
               <CelebrationSet/>
-              <NewBanner sets={this.state.sets}/>
+              <NewBanner/>
             </section>
 
     

@@ -1,7 +1,7 @@
 import React from "react";
 import './NewBanner.scss';
 
-function NewBanner(props) {
+function NewBanner() {
     return (
         <section className="Home-Old-Sets">
             <section className="Home-Old-Sets-Top">

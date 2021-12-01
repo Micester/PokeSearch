@@ -11,9 +11,9 @@ function Header() {
 
             <div className="Home-Header-Bar__Nav">
                 <a href="/" className="Home-Header-Bar__Nav__Link">Home</a>
+                <br></br>
+                <br></br>
                 <a href="/set" className="Home-Header-Bar__Nav__Link">All Sets</a>
-                <a href="/old-classics" className="Home-Header-Bar__Nav__Link">Old Classic's</a>
-                <a href="/new-era" className="Home-Header-Bar__Nav__Link">New Era</a>
 
             </div>
         </section>
