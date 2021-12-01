@@ -5,10 +5,10 @@ import React from "react";
 import axios from "axios";
 import './CelebrationSet.scss';
 
-pokemon.configure({ apiKey: '7f99b83a-cdb8-4c0d-8523-1bd9286a9b14' })
-
 // Components
 import NewCardsDisplay from "../NewCardsDisplay/NewCardsDisplay";
+
+pokemon.configure({ apiKey: '7f99b83a-cdb8-4c0d-8523-1bd9286a9b14' })
 
 class CelebrationSet extends React.Component {
   state = {
@@ -18,7 +18,7 @@ class CelebrationSet extends React.Component {
   componentDidMount() {
     pokemon.card.all({ q: 'set.name:Celebrations' })
     .then((cards) => {
-        // console.log('Base-3 Cards (In Order)', cards) // "Base"
+        // console.log('Celebration Cards (In Order)', cards) // "Base"
         this.setState({ cards: cards });
     })
   }
