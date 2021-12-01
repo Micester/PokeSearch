@@ -20,10 +20,10 @@ function OldSets(props) {
       </div>
 
       {props.sets.data > 0 &&
-        props.sets.data.map((set) => (
-          <div className="OldSet-Pokemon" key={set.id}>
-            <Link to={`/set/${set.name.toLowerCase()}`}>
-              <img className="OldSet-Pokemon" src={set.images.logo} />
+        props.sets.data.map((OldSet) => (
+          <div className="OldSet-Pokemon" key={OldSet.id}>
+            <Link to={`/set/${OldSet.name.toLowerCase()}`}>
+              <img className="OldSet-Pokemon" src={OldSet.images.logo} />
             </Link>
           </div>
         ))}
