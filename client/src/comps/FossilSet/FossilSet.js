@@ -18,24 +18,14 @@ class FossilSet extends React.Component {
   componentDidMount() {
     pokemon.card.all({ q: 'set.name:Fossil' })
     .then((cards) => {
-        // console.log('Base-3 Cards (In Order)', cards) // "Base"
+        console.log('Base-3 Cards (In Order)', cards) // "Base"
         this.setState({ cards: cards });
     })
   }
 
-  // componentDidUpdate(prevProps, prevState) {
-  //   const { id } = this.props.match.params;
-  //   if (id) {
-  //     if (prevState.cards.id !== id) {
-  //       this.getSetsById(id);
-  //     }
-  //   }
-  // }
-
   render() {
     return (
       <section className="Cards">
-        {/* Cards Display | Left Side */}
         <section className="Home-Left">
           <section className="Home-Left-Cards">
             <OldCardsDisplay cards={this.state.cards}/>

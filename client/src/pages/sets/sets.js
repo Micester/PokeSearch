@@ -20,7 +20,7 @@ class SetsPage extends React.Component {
     pokemon.set.all()
     .then((sets) => {
         console.log('Sets props', sets) 
-        this.setState({ sets: sets });// "Base"
+        this.setState({ sets: sets });
     })
   }
  

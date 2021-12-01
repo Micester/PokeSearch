@@ -16,7 +16,7 @@ class OldSetsApi extends React.Component {
   };
 
   componentDidMount() {
-    pokemon.set.where({ q: 'series:Base' })
+    pokemon.set.all({ q: 'series:Base' })
     .then(sets => {
         console.log('Base Set Set', sets)
         this.setState({ sets: sets });

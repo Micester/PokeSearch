@@ -16,9 +16,9 @@ class NewSetsApi extends React.Component {
   };
 
   componentDidMount() {
-    pokemon.set.where({ q: 'series:Sword' })
+    pokemon.set.all({ q: 'series:Sword' })
     .then(sets => {
-        console.log('Sword & Shield', sets) 
+        // console.log('Sword & Shield', sets) 
         this.setState({ sets: sets });
     })
   }

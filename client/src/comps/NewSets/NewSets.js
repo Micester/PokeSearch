@@ -19,11 +19,11 @@ function NewSets(props) {
         </div>
       </div>
 
-      {props.sets.data > 0 &&
-        props.sets.data.map((NewSet) => (
-          <div className="OldSet-Pokemon" key={NewSet.id}>
-            <Link to={`/set/${NewSet.name.toLowerCase()}`}>
-              <img className="OldSet-Pokemon" src={NewSet.images.logo} />
+      {props.sets.length > 0 &&
+        props.sets.map((set) => (
+          <div className="OldSet-Pokemon" key={set.id}>
+            <Link to={`/set/${set.name.toLowerCase()}`}>
+              <img className="OldSet-Pokemon" src={set.images.logo} />
             </Link>
           </div>
         ))}

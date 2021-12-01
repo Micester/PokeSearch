@@ -15,9 +15,10 @@ function App() {
       <Switch>
         <Route path='/' exact component={Home} />
         <Route path='/set' exact component={Sets} />
+        {/* <Route path='/set/set:name' exact component={SetsCards} /> */}
       </Switch>
       <section className="Footer">
-        {/* <Footer /> */}
+        <Footer />
       </section>
     </BrowserRouter>
   );
