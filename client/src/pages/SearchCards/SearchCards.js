@@ -15,22 +15,21 @@ class SearchPage extends React.Component {
     cards: [],
   };
 
-  // componentDidMount() {
-  //   pokemon.card.all()
-  //   .then(card => {
-  //       console.log(card.data) // "Venusaur"
-  //   })
-  // }
+  componentDidMount() {
+    pokemon.card.all()
+    .then(card => {
+        console.log(card.data) // "Venusaur"
+    })
+  }
 
-  // getCards() {
-  //   axios
-  //   pokemon.card.all({ q: 'subtypes:mega', orderBy: '-set.releaseDate' })
-  //     .then(result => {
-  //       console.log(result.data[0].name)
-  //     })
-  //     .catch((error) => console.log(error));
-  // }
-4
+  getCards() {
+    axios
+    pokemon.card.all({ q: 'subtypes:mega', orderBy: '-set.releaseDate' })
+      .then(result => {
+        console.log(result.data[0].name)
+      })
+      .catch((error) => console.log(error));
+  }
 
   render() {
     return (

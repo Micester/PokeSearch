@@ -6,8 +6,8 @@ function AllCards(props) {
 
   return (
     <section>
-      {props.card.length > 0 &&
-        props.card.map((card) => (
+      {props.cards.length > 0 &&
+        props.cards.map((card) => (
           <div className="card" key={card.id}>
             <Link to={`/card/${card.name.toLowerCase()}`}>
               <img className="card-Pokemon" src={card.images.logo} />
