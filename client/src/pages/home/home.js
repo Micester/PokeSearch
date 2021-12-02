@@ -1,5 +1,6 @@
 import { Route, Switch } from "react-router-dom";
 import { Component } from "react";
+import pokemon from 'pokemontcgsdk'
 import React from "react";
 import axios from "axios";
 import './home.scss';
@@ -22,50 +23,23 @@ import NewBanner from "../../comps/NewBanner/NewBanner";
 import FossilSet from "../../comps/FossilSet/FossilSet";
 import CelebrationSet from "../../comps/CelebrationSet/CelebrationSet";
 
+pokemon.configure({ apiKey: '7f99b83a-cdb8-4c0d-8523-1bd9286a9b14' })
+
 
 
 class HomePage extends React.Component {
   state = {
-    sets: [],
+    cards: [],
   };
 
-  componentDidMount() {
-    axios.get(`/sets`).then((response) => {
-      console.log(response)
-      this.setState({ sets: response.data });
-    })
-  }
+  // componentDidMount() {
+    // pokemon.card.all()
+    // .then((cards) => {
+    //     console.log('All Cards (In Order)', cards) // "Base"
+    //     this.setState({ cards: cards });
+    // })
+  // }
 
-  getSets() {
-    axios
-      .get('/sets')
-      .then((response) => {
-        this.setState({
-          cards: response.data,
-        });
-      })
-      .catch((error) => console.log(error));
-  }
-
-  getSetsById(id) {
-    axios
-      .get('/sets/:id')
-      .then((response) => {
-        this.setState({
-          cards: response.data
-        });
-      })
-      .catch((error) => console.log(error));
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    const { id } = this.props.match.params;
-    if (id) {
-      if (prevState.cards.id !== id) {
-        this.getSetsById(id);
-      }
-    }
-  }
 
 
   render() {

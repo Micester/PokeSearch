@@ -13,23 +13,23 @@ pokemon.configure({ apiKey: '7f99b83a-cdb8-4c0d-8523-1bd9286a9b14' })
 
 class CardPage extends React.Component {
   state = {
-    cards: [],
+    card: [],
   }
 
-  componentDidMount() {
-      pokemon.card.all({ q: 'set.name:generations subtypes:mega' })
-  .then((cards) => {
-      console.log('All Cards', cards)
-      this.setState({ cards: cards });
-  })
-  }
+  // componentDidMount() {
+  //   pokemon.card.all()
+  //   .then(card => {
+  //       console.log('Base Set Set', card)
+  //       this.setState({ card: card });
+  //   })
+  // }
 
   render() {
     return (
       <div className="Sets">
         <>
           {/* Body - Pokemon Sets */}
-          <AllCards cards={this.state.cards}/>
+          {/* <AllCards cards={this.state.cards}/> */}
         </>
       </div>
     );

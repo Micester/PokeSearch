@@ -17,7 +17,7 @@ function App() {
       <Switch>
         <Route path='/' exact component={Home} />
         <Route path='/set' exact component={Sets} />
-        {/* <Route path='/set/:id' component={Sets} /> */}
+        {/* <Route path='/set/:id/card' component={Card} /> */}
         {/* <Route path='/card' exact component={Card} /> */}
         {/* <Route path='/searchCards/' exact component={SearchCards} /> */}
          

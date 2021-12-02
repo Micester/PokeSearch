@@ -20,11 +20,22 @@ class SetsPage extends React.Component {
   // Pokmemon did mount
   componentDidMount() {
     this.fetchPokemonSet();
+    this.fetchPokemonCard();
   }
 
 
 
   // Fetch Pokemon SETS 
+
+  // fetchPokemonSet = () => {
+  //   pokemon.set.all()
+  //     .then((sets) => {
+  //       console.log('Sets props', sets)
+  //       this.setState({ sets: sets });
+  //     })
+  // }
+
+  // fetchPokemonCardsById
 
   fetchPokemonSet = () => {
     pokemon.set.all()
@@ -32,21 +43,21 @@ class SetsPage extends React.Component {
         console.log('Sets props', sets)
         this.setState({ sets: sets });
       })
+      
+
+    // pokemon.card.all({ q: 'set.name:generations', orderBy: '-set.releaseDate' })
+    //   .then(cardSets => {
+    //     console.log("All cardSets", cardSets)
+    //   })
   }
 
-  // fetchPokemonCardsById
-
-  fetchPokemonSet = (id) => {
-    pokemon.set.all()
-      .then((sets) => {
-        console.log('Sets props', sets)
-        this.setState({ sets: sets });
-      })
-
-    pokemon.card.all({ q: 'set.id:sm1', orderBy: '-set.releaseDate' })
-      .then(cardSets => {
-        console.log("All cardSets", cardSets)
-      })
+  
+  fetchPokemonCard = () => {
+    pokemon.card.all()
+        .then((cards) => {
+          console.log(cards) 
+          this.setState({ cards: cards.data });
+        })
   }
 
 

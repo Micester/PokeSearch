@@ -1,8 +1,12 @@
 import React from "react";
 import './Search.scss';
 
+
+
 function SearchBar(props) {
-    console.log('SearchBar', props);
+    // console.log('SearchBar', props);
+
+    
 
     return (
         <div className="Home-Right-Search-Container">
