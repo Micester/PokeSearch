@@ -7,7 +7,7 @@ function NewBanner() {
                 <div className="Home-Old-Sets-Top-Heading">
                     <div className="Home-Old-Sets-Celebrations">
                         <h1 className="Home-Old-Sets-Celebrations-Title">
-                            Celebrations
+                            Neo Destiny
                             <a href="/sets/25TH-Celebrations" className="Home-Old-Sets-Top-Heading-Button">
                             View  More
                         </a>

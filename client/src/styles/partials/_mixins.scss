@@ -1,15 +1,14 @@
 @use './variables' as *;
 
 // Responsive Mixins
-
 @mixin tablet {
-    @media (min-width: 768px) {
+    @media screen and (min-width: $tablet-breakpoint) {
         @content;
     }
 }
 
 @mixin desktop {
-    @media (min-width: 1280px) {
+    @media screen and (min-width: $desktop-breakpoint) {
         @content;
     }
 }

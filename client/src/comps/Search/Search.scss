@@ -1,0 +1,24 @@
+.Home-Right-Search-Container{
+
+    &__Bar{ 
+        width: 240px;
+        float: left;
+        height: 33px;
+        line-height: 33px;
+        font-size: 14px;
+        padding: 0 5px;
+        border-radius: 5px;
+        border-right: none;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    &__Button{
+        background: url(../../assets/icons/search.svg) no-repeat scroll .5rem .25rem;
+        width: 47px;
+        height: 37px;
+        border-left: none;
+        background-color: mediumaquamarine;
+        border-top-right-radius: 0.25rem;
+        border-bottom-right-radius: 0.25rem;
+    }
+}

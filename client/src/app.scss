@@ -1,5 +1,7 @@
-@use "./styles/partials/reset";
-// @use "./styles/partials/mixins";
+@use "./styles/partials/reset" as *;
+@use "./styles/partials/mixins"as *;
+@use "./styles/partials/variables"as *;
+
 
 
 .Header{
@@ -7,23 +9,41 @@
     width: 100%;
     position: relative;
 
-    // @include tablet{
-    //     height: 120px;
-    //     width: 100%;
-    //     position: relative;
-    // }
+    @include tablet{
+        height: 120px;
+        width: 100%;
+        position: relative;
+        color: cyan
+    }
+
+    @include desktop{
+        height: 120px;
+        width: 100%;
+        position: relative;
+        color: red;
+    }
 }
 
 
 .Footer{
-    margin-top: 5px;
-    height: 35px;
-    line-height: 35px;
-    padding: 0 10px;
-    font-size: 13px;
-    color: #868479;
+    height: 120px;
+    width: 100%;
+    position: relative;
 
-    // @include tablet{
+
+    @include tablet{
+        height: 120px;
+        width: 100%;
+        position: relative;
+        color: cyan
+    }
+
+    @include desktop{
+        height: 120px;
+        width: 100%;
+        position: relative;
+        color: red;
+    }  // @include tablet{
 
     // }
 }

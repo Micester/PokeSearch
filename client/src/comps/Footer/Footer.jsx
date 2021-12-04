@@ -6,13 +6,9 @@ function Footer() {
     return (
         <section className="Footer-Bar">
             {/* Just for Show */}
-            <div className="Footer-Bar__Title">
-                <p className="Footer-Bar__Title__Text"> Footer </p>
-            </div>
-
-            <div className="Footer-Bar-Nav">
-                <a href="/" className="Footer-Bar-Nav__Link">Terms of Use</a>
-                <a href="/" className="Footer-Bar-Nav__Link">Privacy Policy</a>
+            <div className="Footer-Bar-Socials">
+                <a href="/" className="Footer-Bar-Socials__Links">Terms of Use</a>
+                <a href="/" className="Footer-Bar-Socials__Links">Privacy Policy</a>
             </div>
         </section>
     )

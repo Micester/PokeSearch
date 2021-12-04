@@ -8,7 +8,7 @@ function SearchBar(props) {
         <div className="Home-Right-Search-Container">
             <input className="Home-Right-Search-Container__Bar" id="text" name="text" type="text" placeholder="Search"></input>
 
-            <button> Search </button>
+            <button className="Home-Right-Search-Container__Button"></button>
         </div>
     )
 }

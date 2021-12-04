@@ -1,7 +1,45 @@
-.Home-Header{
+.Header-Bar{
+    background-color: royalblue;
+    position: relative;
 
-    &-Bar{
-        background: teal;
-        position: relative;
+    &-Logo{
+        height: 121px;
     }
+
+    
+    &-Logo__Image{
+        background: url(../../assets/logo/logo.png) no-repeat scroll;
+        position: absolute;
+        top: 15px;
+        width: 300px;
+        height: 45px;
+        z-index: 10;
+    }
+
+    &-Nav{
+        position: absolute;
+        height: 30px;
+        display: flex;
+        top: 91px;
+        align-items: center;
+    }
+    
+    &-Nav__Link{
+        display: inline-block; 
+        margin: 0 2px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        text-decoration: none;
+        text-align: center;
+        line-height: 29px;
+        min-width: 75px;
+        padding: 0 4px;
+        border: 1px solid white;
+        border-bottom: none;
+        border-radius: 5px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
 }

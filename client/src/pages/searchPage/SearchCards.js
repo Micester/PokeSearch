@@ -16,13 +16,6 @@ class SearchCards extends React.Component {
     cards: [],
   };
 
-  // componentDidMount = () => {
-  //   pokemon.card.all({ orderBy: '-set.releaseDate' })
-  //   .then(cards => {
-  //       console.log(cards)
-  //   })
-  // }
-
   componentDidMount = () => {
     axios
     .get("/cards")
@@ -35,20 +28,12 @@ class SearchCards extends React.Component {
     .catch((error) => console.log(error));
 }
 
-
   render() {
     return (
-      <section className="Cards">
-        {/* Search Bar | Right Side */}
-        <section className="Home-Right">
           <section className="Home-Right-Search">
             <SearchBar cards={this.state.cards}/>
           </section>
-        </section>
-
-      </section >
     );
   }
 }
-
 export default SearchCards;
