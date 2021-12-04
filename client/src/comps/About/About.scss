@@ -1,0 +1,44 @@
+.Home-About-Site{
+
+    &-Top-Heading{
+        background-color: royalblue;
+  
+        width: 310px;
+
+        border-radius: 0.25rem;
+        height: 56px;
+        font-size: 19px;
+        text-indent: 20px;
+        line-height: 55px;
+        position: relative;
+        z-index: 2;
+        color: black;
+    }
+
+    &-Bottom{
+        background: #fbfbfd;
+        padding: 20px 0 10px 5px;
+        width: 305px;
+        border: 1px solid #bfc4d1;
+        overflow: auto;
+        color: #828282;
+        font-size: 14px;
+        font-weight: bold;
+        border-left: none;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    &-Bottom-Box{
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin: 0 10px;
+    }
+    &-Bottom-Box__Text{
+        margin-top: 0;
+    }
+}

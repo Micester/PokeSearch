@@ -17,21 +17,17 @@ class FossilSet extends React.Component {
 
   componentDidMount() {
     pokemon.card.all({ q: 'set.name:Fossil' })
-    .then((cards) => {
+      .then((cards) => {
         console.log('Base-3 Cards (In Order)', cards) // "Base"
         this.setState({ cards: cards });
-    })
+      })
   }
 
   render() {
     return (
-      <section className="Cards">
-        <section className="Home-Left">
-          <section className="Home-Left-Cards">
-            <OldCardsDisplay cards={this.state.cards}/>
-          </section>
-        </section>
-      </section >
+      <section className="Home-Fossil-Cards">
+        <OldCardsDisplay cards={this.state.cards} />
+      </section>
     );
   }
 }

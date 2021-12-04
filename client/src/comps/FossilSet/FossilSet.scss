@@ -1,0 +1,53 @@
+.Home-Fossil-Cards{
+    background: #fbfbfd;
+    padding: 20px 0 10px 5px;
+    width: 305px;
+    border: 1px solid #bfc4d1;
+    overflow: auto;
+    color: #828282;
+    font-size: 14px;
+    font-weight: bold;
+    border-left: none;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+
+
+    &-Box-Card{
+        position: relative;
+        width: 135px;
+        height: 197px;
+        float: left;
+        margin: 8px 6px;
+    }
+
+    &-Box-Card-image{
+        width: 137px;
+        height: 189px;
+        margin: 1px 0 0 1px;
+        background: royalblue;
+        border: 1px solid royalblue;
+        border-radius: 10px;
+    }
+    
+    &-Box-Card-title{
+        position: absolute;
+        color: #f1f1f1;
+        font-weight: bold;
+        bottom: 13px;
+        left: 2px;
+        z-index: 5;
+        padding: 5px 0;
+        font-size: 12px;
+        text-align: center;
+        width: 137px;
+        border-top: 2px solid #bfc4d1;
+        border-bottom: 2px solid #bfc4d1;
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+
+}

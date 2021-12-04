@@ -4,22 +4,20 @@ import './About.scss';
 function About() {
 
     return (
-        <section className="Home-About-Container">
-            <section className="Home-New-Sets-Top">
-                <div className="Home-New-Sets-Top-Heading">
-                    <div className="Home-New-Sets-Top-Heading-Left">
-                        <h1 className="Home-New-Sets-Top-Heading-Left-Title">
-                            A Little About PokeSearch
-                        </h1>
-                    </div>
+        <section className="Home-About-Site">
+            <section className="Home-About-Site-Top">
+                <div className="Home-About-Site-Top-Heading">
+                    <h1 className="Home-About-Site-Top-Heading-Title">
+                        A Little About PokeSearch
+                    </h1>
                 </div>
+
             </section>
 
-            <section className="Home-Old-Sets-Bottom-PokeSet">
-                <div className="Home-Old-Sets-Bottom-PokeSet-Con">
-
-                    <p className="Home-Old-Sets-Bottom-PokeSet-Con-Link">
-                      This is new information about this site and what it does
+            <section className="Home-About-Site-Bottom">
+                <div className="Home-About-Site-Bottom-Box">
+                    <p className="Home-About-Site-Bottom-Box__Text">
+                        This is new information about this site and what it does
                     </p>
 
                 </div>

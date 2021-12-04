@@ -1,3 +1,30 @@
 @use "./styles/partials/reset";
+// @use "./styles/partials/mixins";
 
+
+.Header{
+    height: 120px;
+    width: 100%;
+    position: relative;
+
+    // @include tablet{
+    //     height: 120px;
+    //     width: 100%;
+    //     position: relative;
+    // }
+}
+
+
+.Footer{
+    margin-top: 5px;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 10px;
+    font-size: 13px;
+    color: #868479;
+
+    // @include tablet{
+
+    // }
+}
 

@@ -8,28 +8,33 @@ import './SearchCards.scss';
 // Components
 import SearchBar from "../../comps/Search/Search";
 
-pokemon.configure({ apiKey: '7f99b83a-cdb8-4c0d-8523-1bd9286a9b14' })
+// Api
+pokemon.configure({ apiKey: '7f99b83a-cdb8-4c0d-8523-1bd9286a9b14' });
 
-class SearchPage extends React.Component {
+class SearchCards extends React.Component {
   state = {
     cards: [],
   };
 
-  componentDidMount() {
-    pokemon.card.all()
-    .then(card => {
-        console.log(card.data) // "Venusaur"
-    })
-  }
+  // componentDidMount = () => {
+  //   pokemon.card.all({ orderBy: '-set.releaseDate' })
+  //   .then(cards => {
+  //       console.log(cards)
+  //   })
+  // }
 
-  getCards() {
+  componentDidMount = () => {
     axios
-    pokemon.card.all({ q: 'subtypes:mega', orderBy: '-set.releaseDate' })
-      .then(result => {
-        console.log(result.data[0].name)
-      })
-      .catch((error) => console.log(error));
-  }
+    .get("/cards")
+    .then((cards) => {
+      console.log('All Cards', cards)
+      this.setState({
+        cards: cards.data
+      });
+    })
+    .catch((error) => console.log(error));
+}
+
 
   render() {
     return (
@@ -37,7 +42,7 @@ class SearchPage extends React.Component {
         {/* Search Bar | Right Side */}
         <section className="Home-Right">
           <section className="Home-Right-Search">
-            <SearchBar cards={this.state.cards} />
+            <SearchBar cards={this.state.cards}/>
           </section>
         </section>
 
@@ -46,4 +51,4 @@ class SearchPage extends React.Component {
   }
 }
 
-export default SearchPage;
+export default SearchCards;

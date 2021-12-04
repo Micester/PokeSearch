@@ -17,11 +17,15 @@ class CardPage extends React.Component {
   };
 
   componentDidMount() {
-    pokemon.card.all({ q: 'supertype:Pokémon', orderBy: '-set.releaseDate' })
-    .then((cards) => {
-        console.log('All Cards (In Order)', cards) // "Base"
-        this.setState({ cards: cards.data });
-    })
+      axios
+      .get("https://api.pokemontcg.io/v2/cards")
+      .then((cards) => {
+        console.log('All Cards', cards)
+        this.setState({
+          cards: cards
+        });
+      })
+      .catch((error) => console.log(error));
   }
 
   render() {

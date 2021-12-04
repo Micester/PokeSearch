@@ -4,29 +4,29 @@ import './NewSets.scss';
 
 function NewSets(props) {
   return (
-
     <section className="Home-New-Sets-Top">
       <div className="Home-New-Sets-Top-Heading">
-        <div className="Home-New-Sets-Top-Heading-Left">
-          <h1 className="Home-New-Sets-Top-Heading-Left-Title">
-            New Era
-          </h1>
+        <h1 className="Home-New-Sets-Top-Heading-Title">
+          Neo Era
 
-          <a href="/set" className="Home-New-Sets-Top-Heading-Right-Button">
+          <a href="/set" className="Home-New-Sets-Top-Heading-Button">
             View All
           </a>
-
-        </div>
+        </h1>
       </div>
 
-      {props.sets.length > 0 &&
-        props.sets.map((set) => (
-          <div className="set-Pokemon" key={set.id}>
-            <Link to={`/set/${set.name.toLowerCase()}`}>
-              <img className="set-Pokemon" src={set.images.logo} />
-            </Link>
-          </div>
-        ))}
+
+
+      <div className="Home-New-Sets-Bottom">
+        {props.sets.length > 0 &&
+          props.sets.map((set) => (
+            <div className="Home-New-Sets-Bottomset" key={set.id}>
+              <Link to={`/set/${set.name.toLowerCase()}`}>
+                <img className="Home-Old-Sets-Bottomset-Pokemon" src={set.images.logo} />
+              </Link>
+            </div>
+          ))}
+      </div>
     </section>
   );
 }

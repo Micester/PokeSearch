@@ -5,51 +5,60 @@
         width: 300px;
     }
     &-Top-Heading{
-        background-color: lightblue;
-        width: 100px;
-        min-width: 300px;
-    }
-
-    &-Top-Heading-Left{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    // New Sets
-    // New Sets Container
-    &-Bottom-PokeSet-Con{
-        margin-top: 22px;
-        padding: 20px 0 10px 5px;
-        width: 400px;
-        overflow: auto;
-    }
-
-    // Links
-    &-Bottom-PokeSet-Con-Link{
+        background-color: royalblue;
+        width: 310px;
+        border-radius: 0.25rem;
+        height: 56px;
+        color: #fff;
+        font-size: 19px;
+        text-indent: 20px;
+        line-height: 55px;
         position: relative;
-        width: 175px;
-        height: 80px;
-        background: rgb(129, 20, 20); 
-        border-radius: 4px;
-        margin: 10px;
-        display: inline-block;
-      
+        z-index: 2;
+        color: black;
+    }
+
+    &-Top-Heading-Button{
+        position: relative;
+        float: right;
+        text-indent: 0;
+        margin: 12px 10px 0 0;
+        padding: 0 5px;
+        min-width: 30px;
+        height: 30px;
+        line-height: 30px;
+        color: #7d7f87;
+        font-size: 16px;
+        border: 1px solid #8e9ba6;
+        border-radius: 5px;
+        color: white;
         text-decoration: none;
+    }
+
+    // Pokemon Set Links
+    &-Bottomset{
+        background: #fbfbfd;
+        padding: 20px 0 10px 5px;
+        width: 305px;
+        border: 1px solid #bfc4d1;
+        overflow: auto;
+        color: #828282;
+        font-size: 14px;
+        font-weight: bold;
+        border-left: none;
+        border-radius: 5px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
         text-align: center;
     }
 
-    // Link-Images
-    &-Bottom-PokeSet-Con-Link-Image{
-        height: 50px;
-        max-width: 150px;
-        margin-top: 10px;
-    }
-
-    // Link-Text
-    &-Bottom-PokeSet-Con-Link-Image__Text{
-        font-weight: normal;
-        font-size: 10px;
-        display: block;
+    &-Bottomset-Pokemon{
+        position: relative;
+        width: absolute;
+        height: 80px;
+        margin: 10px;
+        display: inline-block;
+        text-decoration: none;
+        text-align: center;
     }
 }
