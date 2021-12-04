@@ -16,32 +16,21 @@ class CelebrationSet extends React.Component {
   };
 
   componentDidMount() {
-    pokemon.card.all({ q: 'set.name:Celebrations' })
+    pokemon.card.all({ q: 'set.name:Destiny' })
     .then((cards) => {
         // console.log('Celebration Cards (In Order)', cards) // "Base"
         this.setState({ cards: cards });
     })
   }
 
-  // componentDidUpdate(prevProps, prevState) {
-  //   const { id } = this.props.match.params;
-  //   if (id) {
-  //     if (prevState.cards.id !== id) {
-  //       this.getSetsById(id);
-  //     }
-  //   }
-  // }
-
   render() {
     return (
-      <section className="Cards">
-        {/* Cards Display | Left Side */}
-        <section className="Home-Left">
-          <section className="Home-Left-Cards">
+    
+
+          <section className="Home-Destiny-Cards">
             <NewCardsDisplay cards={this.state.cards}/>
           </section>
-        </section>
-      </section >
+ 
     );
   }
 }

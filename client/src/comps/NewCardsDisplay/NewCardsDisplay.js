@@ -8,13 +8,13 @@ function NewCardsDisplay(props) {
   //   console.log('NewCardsDisplay', props);
 
   return (
-
-    <section>
+    <section className="Home-Destiny-Cards-Box">
       {props.cards.length > 0 &&
         props.cards.map((card) => (
-          <div className="card" key={card.id}>
-            <Link to={`/set/${card.name.toLowerCase()}`}>
-              <img className="card-Pokemon" src={card.images.small} />
+          <div className="Home-Destiny-Cards-Box-Card" key={card.id}>
+              <Link to={`/card/${card.name.toLowerCase()}/${card.set.name.toLowerCase()}/${card.set.ptcgoCode.toLowerCase()}/${card.number.toLowerCase()}`}>
+              <img className="Home-Destiny-Cards-Box-Card-image" src={card.images.small} />
+              <div className="Home-Destiny-Cards-Box-Card-title">#{card.number} - {card.name}</div>
             </Link>
           </div>
         ))}
