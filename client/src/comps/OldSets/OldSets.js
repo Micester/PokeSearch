@@ -19,7 +19,7 @@ function OldSets(props) {
         {props.sets.length > 0 &&
           props.sets.map((set) => (
             <div className="Home-Old-Sets-Bottomset" key={set.id}>
-              <Link to={`/set/${set.ptcgoCode.toLowerCase()}/${set.name.toLowerCase()}`}>
+              <Link to={`/set/${set.id.toLowerCase()}`}>
                 <img className="Home-Old-Sets-Bottomset-Pokemon" src={set.images.logo} />
               </Link>
             </div>

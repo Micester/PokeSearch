@@ -36,7 +36,7 @@ class SetsPage extends React.Component {
       axios
       .get("/cards")
       .then((cards) => {
-        console.log('All Cards', cards)
+        // console.log('All Cards', cards)
         this.setState({
           cards: cards
         });
@@ -60,11 +60,10 @@ class SetsPage extends React.Component {
       <div className="Sets">
         <>
           {/* Body - Pokemon Sets */}
-          <AllSets sets={this.state.sets} 
-          cards={this.state.cards}/>
+          <AllSets sets={this.state.sets}/>
           
-          <AllCards sets={this.state.sets} 
-          cards={this.state.cards}/>
+          {/* <AllCards sets={this.state.sets} 
+          cards={this.state.cards}/> */}
         </>
       </div>
     );

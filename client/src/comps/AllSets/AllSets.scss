@@ -18,6 +18,7 @@
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
         text-align: center;
+        position: relative;
     }
 
     &-All-Box-Div-Pokemon{
@@ -46,5 +47,27 @@
     &-All-Series-Titles-Names__Text{
         position: relative; 
         bottom: 25%;
+    }
+
+    &-All-Box-Div-Pokemon__Symbol{
+        margin: 0;
+        right: 20px;
+        bottom: 13px;
+        max-width: 16px;
+        height: auto;
+        position: absolute; 
+    }
+
+    &-All-Box-Div-Pokemon__Series{
+        margin: 0;
+        left: 20px;
+        bottom: 13px;
+        max-width: 16px;
+        height: auto;
+        position: absolute; 
+    }
+
+    &-All-Box-Div-Pokemon__Text{
+    text-decoration-color: white;    
     }
 }
