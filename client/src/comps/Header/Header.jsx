@@ -2,7 +2,6 @@ import React from "react";
 import './Header.scss';
 
 function Header() {
-
     return (
         <section className="Header-Bar">
             <div className="Header-Bar-Logo">
@@ -11,8 +10,6 @@ function Header() {
 
             <div className="Header-Bar-Nav">
                 <a href="/" className="Header-Bar-Nav__Link">Home</a>
-                <br></br>
-                <br></br>
                 <a href="/set" className="Header-Bar-Nav__Link">All Sets</a>
             </div>
         </section>

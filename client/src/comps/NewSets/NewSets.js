@@ -15,8 +15,6 @@ function NewSets(props) {
         </h1>
       </div>
 
-
-
       <div className="Home-New-Sets-Bottom">
         {props.sets.length > 0 &&
           props.sets.map((set) => (

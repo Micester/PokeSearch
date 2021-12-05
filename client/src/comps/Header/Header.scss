@@ -15,6 +15,7 @@
         z-index: 10;
     }
 
+    // Navigation Bar
     &-Nav{
         position: absolute;
         height: 30px;
@@ -23,6 +24,7 @@
         align-items: center;
     }
     
+    // Navigation Links
     &-Nav__Link{
         display: inline-block; 
         margin: 0 2px;

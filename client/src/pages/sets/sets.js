@@ -34,7 +34,7 @@ class SetsPage extends React.Component {
   // Fetch Pokemon Card
   fetchPokemonCard = () => {
       axios
-      .get("https://api.pokemontcg.io/v2/cards")
+      .get("/cards")
       .then((cards) => {
         console.log('All Cards', cards)
         this.setState({
@@ -65,7 +65,6 @@ class SetsPage extends React.Component {
           
           <AllCards sets={this.state.sets} 
           cards={this.state.cards}/>
-          
         </>
       </div>
     );

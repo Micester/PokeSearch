@@ -2,7 +2,6 @@ import React from "react";
 import './About.scss';
 
 function About() {
-
     return (
         <section className="Home-About-Site">
             <section className="Home-About-Site-Top">
@@ -11,7 +10,6 @@ function About() {
                         A Little About PokeSearch
                     </h1>
                 </div>
-
             </section>
 
             <section className="Home-About-Site-Bottom">
@@ -19,10 +17,8 @@ function About() {
                     <p className="Home-About-Site-Bottom-Box__Text">
                         This is new information about this site and what it does
                     </p>
-
                 </div>
             </section>
-
         </section>
     )
 }

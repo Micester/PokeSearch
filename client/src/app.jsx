@@ -1,12 +1,13 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 // Components
-
 import Header from "./comps/Header/Header";
 
 import home from "./pages/home/home";
-import SearchCards from './pages/searchPage/SearchCards';
 import sets from "./pages/sets/sets";
+
+// Not Set up
+// import SearchCards from './pages/searchPage/SearchCards';
 
 import Footer from "./comps/Footer/Footer";
 
@@ -22,9 +23,9 @@ function App() {
 
       <section className="Body">
         <Switch>
-          <Route path='/' exact component={home} />
-          <Route path='/search' exact component={SearchCards} />
+          <Route path='/' exact component={home} /> 
           <Route path='/set' exact component={sets} />
+          {/* <Route path='/search' exact component={SearchCards} /> */}
         </Switch>
       </section>
 

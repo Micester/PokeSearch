@@ -1,5 +1,6 @@
 .Home-Right-Search-Container{
 
+    // Search Bar
     &__Bar{ 
         width: 250px;
         float: left;
@@ -13,6 +14,8 @@
         border-bottom-right-radius: 0;
         border-color: black;
     }
+
+    // Search Button
     &__Button{
         background: url(../../assets/icons/search.svg) no-repeat scroll center;
         width: 47px;
