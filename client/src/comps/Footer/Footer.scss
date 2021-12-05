@@ -2,14 +2,12 @@
     background-color: royalblue;
     position: relative;
 
-
-
     &-Socials{
         height: 121px;
         align-items: center;
+        background: url(../../assets/logo/footerLogo.png) no-repeat scroll center;
     }
 
-    
     &-Socials__Links{
         display: inline-block; 
         margin: 0 2px;
