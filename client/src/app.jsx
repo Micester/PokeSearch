@@ -16,6 +16,7 @@ import Footer from "./comps/Footer/Footer";
 import "./app.scss";
 
 function App() {
+  
   return (
     <BrowserRouter>
       <section className="Header">

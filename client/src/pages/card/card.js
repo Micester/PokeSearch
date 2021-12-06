@@ -8,7 +8,6 @@ import AllCards from '../../comps/AllCards/AllCards';
 
 pokemon.configure({ apiKey: '7f99b83a-cdb8-4c0d-8523-1bd9286a9b14' })
 
-
 class CardPage extends React.Component {
   state = {
     cards: [],
