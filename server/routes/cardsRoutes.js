@@ -17,7 +17,7 @@ function cardsData() {
 // get Card by id, returns name  if found
 function getcardsDataById(id) {
   const cardsArray = cardsData();
-  let filteredCards = cardsArray.filter((name) => name.id === id);
+  let filteredCards = cardsArray.find((name) => name.id === id);
   if (filteredCards.length) {
     return filteredCards.shift();
   } else {
@@ -47,9 +47,27 @@ router.get('/', (req, res) => {
   res.json(cardsData());
 });
 
+// router.get('/:id', (req, res) => {
+//   res.json(getcardsDataById(req.params.id));
+
+// });
+
 router.get('/:id', (req, res) => {
-  res.json(getcardsDataById(req.params.id));
-});
+  console.log(req.params.id);
+  fs.readFile('./data/cards.json', 'utf-8',(err, data) => {
+      if(err) {
+          console.log(err);
+          res.json({message: 'error getting card id data'});
+      }
+      const reviewData = JSON.parse(data);
+      const foundReview = reviewData.find((data) => data.id == req.params.id);
+      if(!foundReview) {
+          res.json({message: 'error getting card data'});
+      } else {
+          res.json(foundReview);
+      }
+  });
+})
 
 router.post('/', (req, res) => {
   if (!req.body.name) {

@@ -4,7 +4,7 @@ import './AllSets.scss';
 
 
 function AllSets(props) {
-
+  console.log('All sets', props)
   return (
 
     <section className="Sets-All">

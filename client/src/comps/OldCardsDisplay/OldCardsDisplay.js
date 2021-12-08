@@ -7,7 +7,7 @@ function OldCardsDisplay(props) {
       {props.cards.length > 0 &&
         props.cards.map((card) => (
           <div className="Home-Fossil-Cards-Box-Card" key={card.id}>
-            <Link to={`/card/${card.name.toLowerCase()}/${card.set.name.toLowerCase()}/${card.set.ptcgoCode.toLowerCase()}/${card.number.toLowerCase()}`}>
+              <Link to={`/card/${card.id}`}>
               <img className="Home-Fossil-Cards-Box-Card-image" src={card.images.small} />
               <div className="Home-Fossil-Cards-Box-Card-title">#{card.number} - {card.name}</div>
             </Link>

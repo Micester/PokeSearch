@@ -7,6 +7,7 @@ import home from "./pages/home/home";
 import sets from "./pages/sets/sets";
 import CardPage from "./pages/card/card";
 
+import CurrentCard from '../src/comps/CurrentCard/CurrentCard';
 // Not Set up
 // import SearchCards from './pages/searchPage/SearchCards';
 
@@ -28,6 +29,7 @@ function App() {
           <Route path='/' exact component={home} /> 
           <Route path='/set' exact component={sets} />
           <Route path='/set/:id' exact component={CardPage} />
+          <Route path='/card/:id' exact component={CurrentCard} />
           {/* <Route path='/search' exact component={SearchCards} /> */}
         </Switch>
       </section>

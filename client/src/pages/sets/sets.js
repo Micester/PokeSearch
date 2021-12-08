@@ -6,7 +6,6 @@ import axios from "axios";
 import './sets.scss';
 
 import AllSets from '../../comps/AllSets/AllSets';
-import AllCards from '../../comps/AllCards/AllCards';
 
 pokemon.configure({ apiKey: '7f99b83a-cdb8-4c0d-8523-1bd9286a9b14' })
 
@@ -36,7 +35,7 @@ class SetsPage extends React.Component {
       axios
       .get("/cards")
       .then((cards) => {
-        // console.log('All Cards', cards)
+        console.log('All Cards', cards)
         this.setState({
           cards: cards
         });
@@ -46,24 +45,20 @@ class SetsPage extends React.Component {
 
   // Fetch Pokemon Cards by ID 
   //Set Clicked...Cards Sent to clicked set
-  componentDidUpdate(prevProps, prevState) {
-    const { id } = this.props.match.params;
-    if (id) {
-      if (prevState.cards.id !== id) {
-        this.fetchPokemonCard(id);
-      }
-    }
-  }
+  // componentDidUpdate(prevProps, prevState) {
+  //   const { id } = this.props.match.params;
+  //   if (id) {
+  //     if (prevState.cards.id !== id) {
+  //       this.fetchPokemonCard(id);
+  //     }
+  //   }
+  // }
 
   render() {
     return (
       <div className="Sets">
         <>
-          {/* Body - Pokemon Sets */}
           <AllSets sets={this.state.sets}/>
-          
-          {/* <AllCards sets={this.state.sets} 
-          cards={this.state.cards}/> */}
         </>
       </div>
     );
